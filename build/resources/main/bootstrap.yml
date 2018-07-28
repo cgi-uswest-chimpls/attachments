@@ -1,0 +1,23 @@
+---
+
+spring:
+  application:
+    name: attachments
+  cloud:
+    config:
+      uri: ${vcap.services.cw-portal-config-server.credentials.uri:http://localhost:8888}
+      
+  security:
+    user:
+      name: jhagen1908
+      password: timmy   
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+      
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: debug

@@ -1,0 +1,15 @@
+--- 
+applications: 
+  - 
+    buildpack: java_buildpack
+    instances: 1
+    memory: 750M
+    name: attachments
+    path: C:\Users\jerry.hagen\Documents\GitHub\attachments\build\libs\attachments-0.0.1-SNAPSHOT.jar
+    services: 
+      - cw-portal-config-server
+      - cw-portal-service-registry
+      - attachments-mysql
+    timeout: 180
+    env:
+      APP_VERSION: blue
