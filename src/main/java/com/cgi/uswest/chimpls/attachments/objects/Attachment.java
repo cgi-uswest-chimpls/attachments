@@ -59,5 +59,13 @@ public class Attachment {
 	public void setBinaryfile(Blob binaryfile) {
 		this.binaryfile = binaryfile;
 	}
+
+	public BigDecimal getId() {
+		return id;
+	}
+
+	public void setId(BigDecimal id) {
+		this.id = id;
+	}
 	
 }
