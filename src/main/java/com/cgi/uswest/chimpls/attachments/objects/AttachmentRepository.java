@@ -10,6 +10,8 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 @RepositoryRestResource(collectionResourceRel = "attachment", path = "attachment")
 public interface AttachmentRepository extends CrudRepository<Attachment, BigDecimal> {
 
+	Attachment findOneById(@Param("id") BigDecimal id);
+	
 	Set<Attachment> findAllByIdmessage(@Param("idmessage") String idmessage);
 	
 }
